@@ -1,0 +1,132 @@
+/* variables */
+
+:root {
+	--text-color: #333333;
+	--primary-color: #f4ce14;
+	--card-bg: #edefee;
+	--card-price: red;
+}
+
+.specials-wrapper {
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.specials-container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.specials-header {
+	display: grid;
+	/* 2 columns */
+	grid-template-columns: 1fr 1fr;
+}
+
+.specials-header h2 {
+	font-size: 2rem;
+	color: var(--text-color);
+	margin: 0;
+}
+
+.specials-header button {
+	justify-self: end;
+	align-self: center;
+	background: var(--primary-color);
+	color: var(--text-color);
+	border: none;
+	border-radius: 16px;
+	padding: 0.8rem 1.3rem;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	/* shadow primary */
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.special-card {
+	background-color: var(--card-bg);
+	width: 300px;
+	/* shadow */
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	border-radius: 16px;
+}
+
+.special-card-img {
+	width: 100%;
+	height: 200px;
+	border-radius: 16px 16px 0 0;
+}
+
+.special-card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 16px 16px 0 0;
+}
+
+.special-card-text {
+	padding: 0.7rem;
+	display: grid;
+	/* 2 columns */
+	grid-template-columns: 1fr 1fr;
+	/* align */
+	align-items: center;
+	place-items: center;
+}
+
+.special-card-text h3 {
+	font-size: 1rem;
+	color: var(--text-color);
+	margin: 0;
+}
+
+.special-card-text p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--card-price);
+	margin: 0;
+}
+
+.special-card-description {
+	padding: 0.7rem;
+}
+
+.special-card-description p {
+	font-size: 0.9rem;
+	color: var(--text-color);
+	margin: 0;
+}
+
+.specials-cards {
+	display: grid;
+	/* 3 columns */
+	grid-template-columns: repeat(3, 1fr);
+	/* align */
+	align-items: center;
+	place-items: center;
+	/* gap */
+	gap: 1rem;
+	padding: 3rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+	.specials-cards {
+		/* 2 columns */
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.specials-header h2 {
+		font-size: 1.5rem;
+	}
+	.specials-header button {
+		padding: 0.5rem 1rem;
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.specials-cards {
+		/* 1 column */
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

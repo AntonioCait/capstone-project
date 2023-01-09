@@ -1,11 +1,21 @@
 // logo
 import logo from '../assets/Logo.svg';
+import { useState } from 'react';
+
+import '../styles/Navbar.css';
+
 const Navbar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const handleMenuClick = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
-		<nav>
-			<ul>
+		<nav className="nav-wrapper">
+			<ul className="nav-list">
 				<li>
-					<img src={logo} alt="logo" border="0" />
+					<img className="nav-logo" src={logo} alt="logo" border="0" />
 				</li>
 				<li>Home</li>
 				<li>About</li>
@@ -14,6 +24,26 @@ const Navbar = () => {
 				<li>Order online</li>
 				<li>Login</li>
 			</ul>
+			<div className="nav-mobile-style">
+				<div className="logo-desktop">
+					<img className="nav-logo" src={logo} alt="logo" border="0" />
+				</div>
+				<div className="nav-menu" onClick={handleMenuClick}>
+					<div className="nav-menu-line"></div>
+					<div className="nav-menu-line"></div>
+					<div className="nav-menu-line"></div>
+				</div>
+			</div>
+			{isMenuOpen && (
+				<ul className="nav-list-mobile">
+					<li>Home</li>
+					<li>About</li>
+					<li>Menu</li>
+					<li>Reservations</li>
+					<li>Order online</li>
+					<li>Login</li>
+				</ul>
+			)}
 		</nav>
 	);
 };

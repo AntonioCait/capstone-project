@@ -1,7 +1,9 @@
 import logo from '../assets/Logo.svg';
+import '../styles/Footer.css';
+
 export const Footer = () => {
 	return (
-		<footer>
+		<footer className="footer-wrapper">
 			<div className="footer-container">
 				<div className="footer-left">
 					<img src={logo} alt="" srcset="" />
