@@ -1,9 +1,18 @@
 .nav-wrapper {
-	width: 90%;
-	margin: auto;
+	width: 100%;
+	/* always top */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* nav always top */
+
 .nav-list {
+	padding: 10px;
 	display: grid;
 	place-items: center;
 	grid-template-columns: repeat(7, 1fr);
@@ -79,8 +88,7 @@
 	}
 
 	.nav-mobile-style > .nav-menu {
+		width: 100%;
 		margin-left: auto;
-		margin-top: auto;
-		margin-bottom: auto;
 	}
 }

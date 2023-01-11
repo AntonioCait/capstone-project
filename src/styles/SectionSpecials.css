@@ -110,6 +110,18 @@
 	padding: 3rem 0;
 }
 
+.special-card-link {
+	padding: 0.7rem;
+	margin: 0 auto;
+}
+
+.special-card-link a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
 	.specials-cards {
 		/* 2 columns */

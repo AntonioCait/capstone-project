@@ -11,6 +11,9 @@ export const SpecialCard = (props) => {
 			<div className="special-card-description">
 				<p>{props.description}</p>
 			</div>
+			<div className="special-card-link">
+				<a href="/#">Order a delivery</a>
+			</div>
 		</article>
 	);
 };
