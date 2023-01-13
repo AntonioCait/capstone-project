@@ -4,6 +4,7 @@ import food2img from '../assets/salad.jpg';
 import food3img from '../assets/lemon.jpg';
 
 import { SpecialCard } from '../components/SpecialCard';
+import { Button } from '../components/Button';
 
 export const SectionSpecials = () => {
 	return (
@@ -11,7 +12,7 @@ export const SectionSpecials = () => {
 			<div className="specials-container">
 				<div className="specials-header">
 					<h2>This weeks speacials</h2>
-					<button>Online menu</button>
+					<Button text="Online menu" />
 				</div>
 				<main className="specials-cards">
 					<SpecialCard

@@ -7,6 +7,9 @@ import { RiAlignJustify } from 'react-icons/ri';
 
 import '../styles/Navbar.css';
 
+// router Link
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -20,10 +23,16 @@ const Navbar = () => {
 				<li>
 					<img className="nav-logo" src={logo} alt="logo" border="0" />
 				</li>
-				<li>Home</li>
+				{/* <li>Home</li> */}
+				<Link to="/">
+					<li>Home</li>
+				</Link>
 				<li>About</li>
 				<li>Menu</li>
-				<li>Reservations</li>
+				{/* <li>Booking</li> */}
+				<Link to="/booking">
+					<li>Booking</li>
+				</Link>
 				<li>Order online</li>
 				<li>Login</li>
 			</ul>
