@@ -2,6 +2,9 @@
 import logo from '../assets/Logo.svg';
 import { useState } from 'react';
 
+// icon RiAlignJustify
+import { RiAlignJustify } from 'react-icons/ri';
+
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -29,9 +32,7 @@ const Navbar = () => {
 					<img className="nav-logo" src={logo} alt="logo" border="0" />
 				</div>
 				<div className="nav-menu" onClick={handleMenuClick}>
-					<div className="nav-menu-line"></div>
-					<div className="nav-menu-line"></div>
-					<div className="nav-menu-line"></div>
+					<RiAlignJustify className="nav-react-icon" />
 				</div>
 			</div>
 			{isMenuOpen && (
