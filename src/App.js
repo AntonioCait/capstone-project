@@ -1,5 +1,4 @@
 import './App.css';
-import { Footer } from './sections/Footer';
 import { SectionHero } from './sections/SectionHero';
 import { SectionSpecials } from './sections/SectionSpecials';
 import { SectionTestimonials } from './sections/SectionTestimonials';
@@ -14,7 +13,6 @@ function App() {
 			<SectionSpecials />
 			<SectionTestimonials />
 			<SectionAbout />
-			<Footer />
 		</>
 	);
 }
