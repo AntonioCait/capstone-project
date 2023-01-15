@@ -46,10 +46,14 @@ const Navbar = () => {
 			</div>
 			{isMenuOpen && (
 				<ul className="nav-list-mobile">
-					<li>Home</li>
+					<Link to="/">
+						<li>Home</li>
+					</Link>
 					<li>About</li>
 					<li>Menu</li>
-					<li>Reservations</li>
+					<Link to="/booking">
+						<li>Booking</li>
+					</Link>
 					<li>Order online</li>
 					<li>Login</li>
 				</ul>
